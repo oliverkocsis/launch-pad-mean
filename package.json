@@ -4,14 +4,11 @@
   "description": "",
   "main": "server/index.js",
   "scripts": {
-    "install-ui": "cd ui && npm install",
-    "install-server": "cd server && npm install",
-    "install": "npm run install-ui && npm run install-server",
+    "install": "concurrently \"cd ui && npm install\" \"cd server && npm install\"",
     "start": "cd server && npm run start",
     "build": "cd ui && npm run build",
-    "local-ui": "cd ui && ng build --outputPath=dist --watch=true",
-    "local-server": "cd server && node  -r dotenv/config index.js dotenv_config_path=./../.env",
-    "local": "concurrently --kill-others \"npm run local-ui\" \"npm run local-server\""
+    "test": "concurrently \"cd ui && npm test\" \"cd server && npm test\"",
+    "local": "concurrently --kill-others \"cd ui && npm run local\" \"cd server && npm run local\""
   },
   "engines": {
     "node": "10"

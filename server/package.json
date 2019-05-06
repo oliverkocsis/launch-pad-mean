@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "mocha '**/*.spec.js'",
+    "local": "nodemon -r dotenv/config index.js dotenv_config_path=../.env"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +14,9 @@
   "dependencies": {
     "express": "^4.16.4",
     "mongodb": "^3.2.3"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.0"
   }
 }
