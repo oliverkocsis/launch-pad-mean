@@ -1,0 +1,26 @@
+{
+  "name": "launch-pad-mean",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "install-ui": "cd ui && npm install",
+    "install-server": "cd server && npm install",
+    "install": "npm run install-ui && npm run install-server",
+    "start": "cd server && npm run start",
+    "build": "cd ui && npm run build",
+    "local-ui": "cd ui && ng build --outputPath=dist --watch=true",
+    "local-server": "cd server && node  -r dotenv/config index.js dotenv_config_path=./../.env",
+    "local": "concurrently --kill-others \"npm run local-ui\" \"npm run local-server\""
+  },
+  "engines": {
+    "node": "10"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "dotenv": "^8.0.0"
+  }
+}
