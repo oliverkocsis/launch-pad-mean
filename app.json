@@ -1,0 +1,23 @@
+{
+   "name":"Launch Pad: MEAN",
+   "description":"App using MEAN stack ready to be deployed to Heroku",
+   "repository":"https://github.com/oliverkocsis/launch-pad-mean",
+   "logo":"https://raw.githubusercontent.com/oliverkocsis/launch-pad-mean/master/ui/src/assets/launch.png",
+   "keywords":[
+      "mean",
+      "mongo",
+      "express",
+      "angular",
+      "node",
+      "heroku"
+   ],
+   "env":{
+      "NODE_ENV":{
+         "description":"By default NODE_ENV is set to production. Setting to development to be able to build Angular.",
+         "value":"development"
+      }
+   },
+   "addons":[
+      "mongolab:sandbox"
+   ]
+}
